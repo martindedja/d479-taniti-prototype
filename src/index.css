@@ -1,0 +1,282 @@
+/* Low-fidelity, grayscale wireframe styling on purpose — this is a prototype, not a final design. */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border: #999999;
+  --border-light: #cccccc;
+  --bg: #ffffff;
+  --bg-muted: #f2f2f2;
+  --text: #222222;
+  --text-muted: #555555;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--text);
+}
+
+h1, h2, h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.75rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+/* Header */
+
+.site-header {
+  border-bottom: 2px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.site-logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--border);
+  background: var(--bg-muted);
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem 0.75rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding: 0.25rem 0.4rem;
+  border: 1px solid transparent;
+}
+
+.site-nav a.active {
+  border: 1px solid var(--border);
+  background: var(--bg-muted);
+  font-weight: bold;
+}
+
+@media (max-width: 640px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    display: none;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+}
+
+/* Main content */
+
+.page-content {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  border: 2px solid var(--border);
+  padding: 0.6rem 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg);
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+
+.button.primary {
+  background: var(--bg-muted);
+}
+
+.button.secondary {
+  background: var(--bg);
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.plan-card {
+  justify-content: center;
+  background: var(--bg-muted);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.info-card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Placeholder image box */
+
+.placeholder-box {
+  border: 1px dashed var(--border);
+  background: var(--bg-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.placeholder-box.tall {
+  min-height: 200px;
+}
+
+/* Hero */
+
+.hero {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero h1 {
+  border-bottom: none;
+  margin-top: 1rem;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 2px solid var(--border);
+  background: var(--bg-muted);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer-section h3 {
+  margin-top: 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.35rem;
+}
+
+.footer-section a {
+  text-decoration: none;
+}
+
+.footer-note {
+  width: 100%;
+  border-top: 1px solid var(--border-light);
+  padding-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
