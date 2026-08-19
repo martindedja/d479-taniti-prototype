@@ -40,6 +40,14 @@ const sections = [
     title: 'National Holidays',
     items: ['Many attractions may close on national holidays. Check ahead before visiting.'],
   },
+  {
+    title: 'Groceries & Essentials',
+    items: [
+      'Taniti has two supermarkets.',
+      'Taniti has two smaller grocery stores.',
+      'Taniti has one convenience store open 24 hours a day.',
+    ],
+  },
 ]
 
 export default function VisitorInformation() {

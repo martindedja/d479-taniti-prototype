@@ -71,10 +71,33 @@ h2 {
 
 .menu-toggle {
   display: none;
-  border: 1px solid var(--border);
+  align-items: center;
+  gap: 0.4rem;
+  border: 2px solid var(--border);
   background: var(--bg-muted);
-  padding: 0.4rem 0.75rem;
+  color: var(--text);
+  padding: 0.5rem 0.9rem;
+  font-weight: bold;
+  font-size: 0.95rem;
   cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: var(--border-light);
+}
+
+.menu-icon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.menu-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
 }
 
 .site-nav {
@@ -98,7 +121,7 @@ h2 {
 
 @media (max-width: 640px) {
   .menu-toggle {
-    display: block;
+    display: inline-flex;
   }
 
   .site-nav {

@@ -24,7 +24,13 @@ export default function Header() {
           onClick={() => setMenuOpen((open) => !open)}
           aria-expanded={menuOpen}
           aria-controls="main-nav"
+          aria-label="Toggle navigation menu"
         >
+          <span className="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
           {menuOpen ? 'Close' : 'Menu'}
         </button>
       </div>

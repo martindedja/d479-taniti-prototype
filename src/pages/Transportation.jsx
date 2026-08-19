@@ -1,15 +1,15 @@
 const gettingThere = [
-  { title: 'Air', description: 'Most visitors arrive by air. Taniti has regular flight service.' },
-  { title: 'Cruise Ship', description: 'Some visitors arrive by cruise ship, docking at Merriton Landing.' },
+  { title: 'Air', description: 'Almost all visitors arrive by air. Taniti’s airport can accommodate small jets and propeller planes. The airport is being expanded, so larger jets may be able to land within the next few years.' },
+  { title: 'Cruise Ship', description: 'Some visitors arrive on a small cruise ship, which docks in Yellow Leaf Bay one night per week.' },
 ]
 
 const gettingAround = [
-  { title: 'Public Bus', description: 'Public buses operate within Taniti City.' },
-  { title: 'Private Bus', description: 'Private bus services cover routes outside Taniti City.' },
-  { title: 'Taxi', description: 'Taxis are available throughout the island.' },
-  { title: 'Rental Car', description: 'Rental cars are available for visitors who want to explore independently.' },
-  { title: 'Bike Rental', description: 'Bike rentals are available for shorter trips around town.' },
-  { title: 'Walking', description: 'Many areas of Taniti City are walkable.' },
+  { title: 'Public Bus', description: 'Public buses serve Taniti City and run from 5:00 a.m. to 11:00 p.m. every day.' },
+  { title: 'Private Bus', description: 'Private buses serve the rest of the island, outside Taniti City.' },
+  { title: 'Taxi', description: 'Taxis are available in Taniti City.' },
+  { title: 'Rental Car', description: 'Rental cars are available from a local rental agency near the airport.' },
+  { title: 'Bike Rental', description: 'Bikes and helmets are available from several vendors. Helmets are required by law.' },
+  { title: 'Walking', description: 'Taniti City is fairly flat and very walkable. The area around Merriton Landing is also easy to explore on foot.' },
 ]
 
 function TransportList({ items }) {
@@ -38,8 +38,9 @@ export default function Transportation() {
       <section className="section">
         <h2>Getting Around Taniti</h2>
         <p>
-          Taniti City has public bus service. Outside the city, private buses, taxis,
-          rental cars, bikes, and walking are common ways to get around.
+          Taniti City has public bus service, taxis, and is fairly flat and walkable.
+          Outside the city, private buses, rental cars, and bikes are common ways to
+          get around.
         </p>
         <TransportList items={gettingAround} />
       </section>

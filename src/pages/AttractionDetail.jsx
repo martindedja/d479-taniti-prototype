@@ -42,7 +42,7 @@ export default function AttractionDetail() {
       </section>
 
       <Link to="/visitor-information" className="button primary">
-        Learn More / Booking Information
+        Visitor Information
       </Link>
 
       <section className="section">
