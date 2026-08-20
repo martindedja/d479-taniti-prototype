@@ -67,6 +67,9 @@ h2 {
   font-weight: bold;
   font-size: 1.1rem;
   text-decoration: none;
+  border: 1px solid var(--border);
+  background: var(--bg-muted);
+  padding: 0.4rem 0.85rem;
 }
 
 .menu-toggle {

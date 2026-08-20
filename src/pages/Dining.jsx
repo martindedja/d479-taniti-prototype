@@ -28,7 +28,7 @@ export default function Dining() {
       <div className="card-grid">
         {diningOptions.map((option) => (
           <div key={option.title} className="card">
-            <Placeholder label={option.title} />
+            <Placeholder label={`${option.title} Image Placeholder`} />
             <h3>{option.title}</h3>
             <p className="muted">{option.count}</p>
             <p>{option.description}</p>

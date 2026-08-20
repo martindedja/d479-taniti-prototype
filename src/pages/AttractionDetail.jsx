@@ -50,7 +50,7 @@ export default function AttractionDetail() {
         <div className="card-grid">
           {related.map((a) => (
             <Link key={a.slug} to={`/things-to-do/${a.slug}`} className="card attraction-card">
-              <Placeholder label={a.title} />
+              <Placeholder label={`${a.title} Image Placeholder`} />
               <h3>{a.title}</h3>
               <p>{a.summary}</p>
             </Link>

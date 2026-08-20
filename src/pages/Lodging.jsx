@@ -14,7 +14,7 @@ export default function Lodging() {
       <div className="card-grid">
         {lodgingOptions.map((option) => (
           <Link key={option.slug} to={`/lodging/${option.slug}`} className="card">
-            <Placeholder label={option.title} />
+            <Placeholder label={`${option.title} Image Placeholder`} />
             <h3>{option.title}</h3>
             <p>{option.summary}</p>
           </Link>
